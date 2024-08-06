@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <link rel="stylesheet" href="/Styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="left-grid" class='js-left-grid'>
+            <h2>Book List</h2>
+            <div class="book-card">
+                <!-- <h3>Title: The Great Gatsby</h3>
+                <p>Author: F. Scott Fitzgerald</p>
+                <p>Pages: 180</p>
+                <p>Status: <span class="status read">Read</span></p>
+                <button class="delete-btn">Delete</button> -->
+            </div>
+            <div class="book-card">
+                <h3>Title: To Kill a Mockingbird</h3>
+                <p>Author: Harper Lee</p>
+                <p>Pages: 281</p>
+                <p>Status: <span class="status not-read">Not Read</span></p>
+                <button class="delete-btn">Delete</button>
+            </div>
+            <!-- Additional book cards can be added here -->
+      </div>
+      <div class="right-grid">
+        <h2>Add a Book</h2>
+        <form id="book-form">
+          <label for="title">Title:</label>
+          <input class="js-title-element" type="text" name="title" required /><br />
 
-    <link rel="stylesheet" href="/Styles/styles.css">
-</head>
-<body>
-    <h1>Odin Library</h1>
+          <label for="author">Author:</label>
+          <input class="js-author-element" type="text" name="author" required /><br />
 
+          <label for="pages">Page Number:</label>
+          <input class="js-page-element" type="number" name="pages" required /><br />
+
+          <label for="status">Read Status:</label>
+          <select id="status" name="status" required>
+            <option value="read">Read</option>
+            <option value="not-read">Not Read</option></select
+          ><br />
+
+          <button class="js-add-button">Add Book</button>
+        </form>
+      </div>
+    </div>
 
     <script src="/Js/index.js"></script>
-</body>
+  </body>
 </html>
